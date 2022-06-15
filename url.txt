@@ -1,0 +1,9 @@
+https://codepen.io/RitikaAgrawal08/pen/gOvZaPV
+https://stackoverflow.com/questions/59198952/using-document-queryselector-in-react-should-i-use-refs-instead-how
+https://bobbyhadz.com/blog/react-document-queryselector#:~:text=The%20equivalent%20of%20the%20document,on%20the%20ref%20%2C%20e.g.%20ref.
+https://stackoverflow.com/questions/38549287/react-how-to-get-item-props-from-event-currenttarget
+
+
+
+React: Event Bubbling and Capturing
+https://www.robinwieruch.de/react-event-bubbling-capturing/

@@ -1,0 +1,207 @@
+*,
+      ::before,
+      ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: min(90%, 370px);
+        height: min(90vh, 560px);
+        background: #efefef;
+        position: relative;
+        font-family: sans-serif;
+        padding: 1.5em;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 0 0 0.25em #aaa;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #0f52ba;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+        font-weight: normal;
+        margin: 0.5em 0 1.5em 0.05em;
+        color: #121212;
+      }
+
+      .product-price-count-container {
+        display: flex;
+        font-size: 1.45rem;
+        font-weight: bold;
+        justify-content: space-between;
+        margin: 0.75em 0;
+      }
+
+      .plus-icon {
+        font-size: 1.05rem;
+        width: 2.25em;
+        height: 2.25em;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #ff3131;
+        color: #ff3131;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 0 5px #ddd;
+      }
+
+      .product-img-container {
+        position: relative;
+        width: 100%;
+        height: min(65%, 300px);
+        transition: all 750ms ease-in-out;
+      }
+
+      .product-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .add-to-cart-btn {
+        position: relative;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.05rem;
+        height: 2.75em;
+        text-transform: uppercase;
+        border: none;
+        background-color: #ff3131;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .back-arrow {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 1.5rem;
+        width: 4em;
+        height: 4em;
+        background-color: #121212;
+        color: #fff;
+        z-index: 3;
+      }
+
+      .side-card {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55vw;
+        height: 100vh;
+        background-color: #efefef;
+      }
+
+      .product-details-container {
+        padding: 0 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .product-details-container h2 {
+        margin: 1em 0 0 0;
+        font-size: 3.5rem;
+      }
+
+      .product-details-container h3 {
+        font-size: 2.15rem;
+        margin: 0.5em 0 1.5em 0;
+      }
+
+      .product-details-container .product-price {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .product-details-container .product-detail {
+        font-size: 1.15rem;
+        width: 80%;
+        margin: 2em 0;
+      }
+
+      .product-details-container .add-to-cart-btn {
+        margin: 1.65em 0;
+        width: 40%;
+        height: 3.75em;
+        left: 0;
+        transform: translateX(0);
+      }
+
+      .side-card figure {
+        position: relative;
+        width: 100%;
+        height: 25%;
+        display: grid;
+        place-items: center;
+        background-color: #fada5e;
+        border: 4px solid #efefef;
+      }
+
+      .side-card figure .product-img {
+        width: 65%;
+        height: 65%;
+      }
+
+      /* selected classes */
+
+      .card.selected {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+      }
+
+      .card.selected::before {
+        content: "";
+        position: absolute;
+        width: 45%;
+        height: 100%;
+        background: radial-gradient(
+            80% 80% at 0% 50%,
+            #fada5e 49.5%,
+            transparent 50.5%
+          ),
+          radial-gradient(50% 50% at 100% 80%, #fada5e 49.5%, transparent 50.5%);
+        background-repeat: no-repeat;
+        background-color: #0f52ba;
+      }
+
+      .card.selected .product-img-container {
+        position: relative;
+        width: 45%;
+        height: 65%;
+        top: 80%;
+        transform: translateY(-80%);
+      }
+
+      .card.selected .side-card {
+        display: grid;
+        grid-template: 100% / 75% 25%;
+      }
+
+      /*.card.selected .hide {
+        display: none;
+      }*/
+
+      .card.selected .back-arrow {
+        display: grid;
+        place-items: center;
+      }
